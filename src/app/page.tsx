@@ -5,7 +5,7 @@ import {
   useUserOpWait,
 } from "@biconomy/use-aa";
 import Image from "next/image";
-import { useEffect } from "react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { encodeFunctionData, parseAbi } from "viem";
 import { polygonAmoy } from "viem/chains";
 
@@ -45,6 +45,7 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
+        <ConnectButton />
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
