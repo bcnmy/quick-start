@@ -75,10 +75,17 @@ export default function Home() {
           priority
         />
 
-        <div className="flex">
-          {smartAccountAddress
-            ? `Connected ${smartAccountAddress}`
-            : "Not Connected"}
+        <div className="flex flex-col justify-center items-center">
+          {smartAccountAddress ? smartAccountAddress == "0x" ? (
+            "Not Connected"
+          ) : (
+            <div className="flex flex-col justify-center items-center">
+              <div onClick={()=> {console.log(smartAccountAddress == "0x")}}>Smart Account Address</div>
+              <span className="mt-2">{smartAccountAddress}</span>
+            </div>
+          ) : (
+            "Not Connected"
+          )}
         </div>
         <button
           className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
@@ -113,7 +120,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Biconomy.js features and API.
+            Find in-depth information about Biconomy features and its API.
           </p>
         </a>
 
